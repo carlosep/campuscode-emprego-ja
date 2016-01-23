@@ -1,1 +1,9 @@
 <h1>Emprego Já</h1>
+
+<% @jobs.each do |job| %>
+  <p><%= job.title       %></p>
+  <p><%= job.category    %></p>
+  <p><%= job.company     %></p>
+  <p><%= job.description %></p>
+  <p><%= job.location    %></p>
+<% end %>

@@ -1,0 +1,12 @@
+branch view_job_detail
+  Error message: Unable to find link or button
+    -Added link on views/home/index.html.erb and respective route for job
+  Error message: Uninitialized constant JobsController
+    -Added file jobs_controller with class JobsController
+  Error message: Action 'show' could not be found on JobsController
+    -Added action show on JobsController
+  Error message: Missing Template
+    -Added file views/jobs/show.html.erb
+  Error message: expect(page).to have_content
+    -Added correct @job :id on show action and @job content on views/jobs/show.html.erb
+--Test Passed--

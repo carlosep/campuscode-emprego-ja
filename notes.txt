@@ -1,0 +1,6 @@
+branch jobs_by_company
+  Error message: unable to find link or button "Campus Code"
+    -Added @companies = Company.all on HomeController and added iteration that creates links of all companies on index
+  Error message: expect(page).to have_content job.title
+    -Added iteration for jobs on views/companies/show.html.erb
+--TEST PASSED__

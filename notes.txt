@@ -1,0 +1,7 @@
+branch user_create_job
+  Error message: undefined local variable or method 'new_job_path'
+    -Added new and create to resources route, action new to JobsController and template on views/jobs/new.html.erb
+  Error message: unable to find field "Title"
+    -Added form to views/jobs/new.html.erb
+  Error message: action 'create' could not be found for JobsController
+    -Added action create on JobsController w/ redirect_to @job

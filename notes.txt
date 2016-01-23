@@ -1,0 +1,8 @@
+branch featured_jobs
+  Error message: Unable to find checkbox "Featured"
+    -Added checkbox featured to new job form
+  Error message: Undefined method 'featured'
+    -Generated migration to add a boolean featured field to jobs
+  Error message: expect(page).to have_content ...
+    -Added permission for 'featured' on JobsController and if clause to display message on view in case featured.
+--TEST PASSED--

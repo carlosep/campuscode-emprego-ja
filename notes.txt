@@ -1,0 +1,12 @@
+branch user_create_company
+  Error message: undefined local variable or method 'new_company_path'
+    -Added resources routes for companies and created CompaniesController
+  Error message: The action 'new' couldn't be found for CompaniesController
+    -Added action 'new' and template views/companies/new.html.erb
+  Error message: Unable to find field "Name"
+    -Created form on views/companies/new.html.erb
+  Error message: The action 'create' could not be found for CompaniesController
+    -Added action 'create' and template views/companies/show.html.erb
+  Error message: expect(page).to have_content company.name
+    -Added action 'show' and filled views/companies/show.html.erb w/ correct data
+--TEST PASSED--

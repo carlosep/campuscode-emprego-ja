@@ -1,0 +1,8 @@
+branch companies:
+  Error message: uninitialized constant Company
+    -Generated model company w/ fields
+  Error message: Unable to find select box "Company"
+    -Added select_collection for Company on views/jobs/new, model associations between company and job, migration to add company_id on job, and permission for company_id on JobsController
+  Error message: expect(page).to have_content company.name
+    -Added job.company.name where it used to be job.company
+--TEST PASSED--

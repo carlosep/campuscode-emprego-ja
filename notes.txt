@@ -1,0 +1,10 @@
+branch user_create_valid_job
+  Error message: undefined method 'name'
+    -Added Validation on model Job
+  Error message: No route matches [GET] "/jobs"
+    -Changed Job.create on action 'create' for Job.new, if saved redirect, if not throw error messages
+  Failure/Error: <%= f.collection_select :company_id, @companies, :id, :name %>; Error message: undefined method `map' for nil:NilClass
+    -Added @companies = Company.all on action 'create' at JobsController
+  Error message: expect(page).to have_content ...
+    -Added iteration on @errors at views/jobs/new
+--TEST PASSED--

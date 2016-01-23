@@ -9,8 +9,14 @@ class JobsController < ApplicationController
   end
 
   def create
-    @job = Job.create(job_params)
-    redirect_to @job
+    @companies = Company.all
+    @job = Job.new(job_params)
+    if @job.save
+      redirect_to @job
+    else
+      @errors = @job.errors.full_messages
+      render :new
+    end
   end
 
   private

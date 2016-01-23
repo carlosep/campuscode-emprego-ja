@@ -5,3 +5,4 @@ branch user_create_job
     -Added form to views/jobs/new.html.erb
   Error message: action 'create' could not be found for JobsController
     -Added action create on JobsController w/ redirect_to @job
+--TEST PASSED--

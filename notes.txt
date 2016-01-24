@@ -1,0 +1,10 @@
+branch categories
+  Error message: uninitialized constant Category.
+    -Generated Model for category and defined association w/ job
+  Error message: can't write unknown attribute 'category_id'
+    -Generated Migration to add foreign_key category_id and Another migration to remove category:string
+  Error message: Category(#64080920) expected, got String(#13133680)
+    -Changed permissions on job controller from :category to :category_id
+  Error message: expect(page).to have_content job.location
+    -Fixed broken tests, homepage view, changed "company" on views/jobs/new.html.erb to "company_id".
+--TEST PASSED--

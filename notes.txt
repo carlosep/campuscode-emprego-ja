@@ -1,0 +1,9 @@
+branch user_edit_job
+  Error message: undefined method 'edit_job_path(job)'
+    -Added edit and update on resources routes
+  Error message: the action 'edit' could not be found for JobsController
+    -Added action edit on JobsController
+  Error message: Missing template jobs/edit
+    -Added template w/ form (changed 'Criar Vaga' for 'Atualizar Vaga')
+  Error message: undefined method 'map' for nil:NilClass
+    -Added permit on before_action for set_companies and set_categories

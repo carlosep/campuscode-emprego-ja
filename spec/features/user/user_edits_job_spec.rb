@@ -76,4 +76,3 @@ feature 'User creates a new job' do
 
 
 end
-

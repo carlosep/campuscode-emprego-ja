@@ -1,0 +1,8 @@
+branch user_create_valid_company
+  Error message: expect(page).to have_content "Warning! All fields are mandatory."
+    -Added validation on Company
+  Failure/Error: click_on 'Criar Empresa', Error message: No route matches [GET] "/companies"
+    -Changed Job.create on action 'create' for Job.new, if saved redirect, if not throw error messages and render 'new'
+  Error message: expect(page).to have_content "Warning! All fields are mandatory."
+    -Added error validation on views/companies/new.html.erb
+--TEST PASSED--

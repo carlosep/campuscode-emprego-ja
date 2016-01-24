@@ -1,3 +1,9 @@
+<div id="errors">
+<% if @company.errors.any? %>
+<p> Warning! All fields are mandatory. </p>
+<% end %>
+</div>
+
 <%= form_for @company do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>

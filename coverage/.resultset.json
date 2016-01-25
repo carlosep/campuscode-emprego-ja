@@ -8,7 +8,7 @@
       "/home/carlos/CampusCode/gitlab_projects/emprego-ja/app/controllers/home_controller.rb": [
         1,
         1,
-        1,
+        3,
         null,
         null
       ],
@@ -24,19 +24,13 @@
         null
       ],
       "/home/carlos/CampusCode/gitlab_projects/emprego-ja/app/controllers/jobs_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "/home/carlos/CampusCode/gitlab_projects/emprego-ja/app/controllers/welcome_controller.rb": [
-        0,
-        0,
-        0,
-        0
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1453749154
+    "timestamp": 1453749734
   }
 }

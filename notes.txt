@@ -21,4 +21,10 @@ branch view_job_detail
     -Added file views/jobs/show.html.erb
   Error message: expect(page).to have_content
     -Added correct @job :id on show action and @job content on views/jobs/show.html.erb
+
+home_with_jobs branch:
+  Error message: uninitialized constant Job
+    -Generated model with all fields and migration.
+  Error message: expect(page).to have_content
+    -Added @jobs = Job.all on index action on HomeController and iterated it on views/home/index.html.erb
 --Test Passed--

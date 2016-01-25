@@ -1,0 +1,6 @@
+branch user_edit_companies
+  Error message: undefined method 'edit_company_path'
+    -Added resources edit and update on for company, actions on controller, and template w/ form
+  Error message: First argument in form cannot contain nil or be empty
+    -Added set_company before_action
+--TEST PASSED--

@@ -25,7 +25,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
 
 
 ## Visitante acessa a pagina inicial
-Branch: home
+#### *Branch: home*
 
 Error message: undefined method or variable 'root_path'  
   -Add root route on routes.rb  
@@ -40,7 +40,7 @@ Error message: expected(page).to have_content
 --Test Passed--
 
 ## Visitante vê detalhes de uma vaga
-Branch: view_job_detail
+#### *Branch: view_job_detail*
 
 Error message: Unable to find link or button  
     -Added link on views/home/index.html.erb and respective route for job  
@@ -55,7 +55,7 @@ Error message: Unable to find link or button
 --Test Passed--
 
 ## Visitante visualiza vagas
-Branch: home_with_jobs
+#### *Branch: home_with_jobs*
 
 Error message: uninitialized constant Job  
   -Generated model with all fields and migration.  
@@ -64,7 +64,7 @@ Error message: expect(page).to have_content
 --Test Passed--
 
 ## Usuário cadastra vaga
-Branch: user_create_job
+#### *Branch: user_create_job*
 
 Error message: undefined local variable or method 'new_job_path'  
   -Added new and create to resources route, action new to JobsController and template on views/jobs/new.html.erb  
@@ -75,7 +75,7 @@ Error message: action 'create' could not be found for JobsController
 --TEST PASSED--
 
 ## Usuário usa empresas cadastradas
-Branch: companies
+#### *Branch: companies*
 
 Error message: uninitialized constant Company  
   -Generated model company w/ fields  
@@ -86,7 +86,7 @@ Error message: expect(page).to have_content company.name
 --TEST PASSED--
 
 ## Usuário marca vagas em destaque
-Branch: featured_jobs
+#### *Branch: featured_jobs*
 
 Error message: Unable to find checkbox "Featured"  
   -Added checkbox featured to new job form  
@@ -97,7 +97,7 @@ Error message: expect(page).to have_content ...
 --TEST PASSED--
 
 ## Usuário cadastra empresas
-Branch: user_create_company
+#### *Branch: user_create_company*
 
 Error message: undefined local variable or method 'new_company_path'  
   -Added resources routes for companies and created CompaniesController  
@@ -112,7 +112,7 @@ Error message: expect(page).to have_content company.name
 --TEST PASSED--
 
 ## Usuário deve criar vagas corretamente
-Branch: user_create_valid_job
+#### *Branch: user_create_valid_job*
 
 Error message: undefined method 'name'  
   -Added Validation on model Job  
@@ -125,7 +125,7 @@ Error message: expect(page).to have_content ...
 --TEST PASSED--
 
 ## Visitante escolhe vagas por empresas
-Branch: jobs_by_company
+#### *Branch: jobs_by_company*
 
 Error message: unable to find link or button "Campus Code"  
   -Added @companies = Company.all on HomeController and added iteration that creates links of all companies on index  
@@ -134,7 +134,7 @@ Error message: expect(page).to have_content job.title
 --TEST PASSED--
 
 ## Usuário usa categorias cadastradas
-Branch: categories
+#### *Branch: categories*
 
 Error message: uninitialized constant Category.  
   -Generated Model for category and defined association w/ job  
@@ -147,7 +147,7 @@ Error message: expect(page).to have_content job.location
 --TEST PASSED--
 
 ## Visitante escolhe vagas por categorias
-Branch: jobs_by_categories
+#### *Branch: jobs_by_categories*
 
 Error message: Unable to find link or button "Desenvolvedor"  
   -Added @categories on HomeController and Iteration on index  
@@ -158,7 +158,7 @@ Error message: expect(page).to have_content category.name
 --TEST PASSED--
 
 ## Usuário edita vaga
-Branch: user_edit_job
+#### *Branch: user_edit_job*
 
 Error message: undefined method 'edit_job_path(job)'  
   -Added edit and update on resources routes  
@@ -171,7 +171,7 @@ Error message: undefined method 'map' for nil:NilClass
 --TEST PASSED--
 
 ## Usuário deve criar empresas corretamente
-Branch: user_create_valid_company
+#### *Branch: user_create_valid_company*
 
 Error message: expect(page).to have_content "Warning! All fields are mandatory."  
   -Added validation on Company  
@@ -182,7 +182,7 @@ Error message: expect(page).to have_content "Warning! All fields are mandatory."
 --TEST PASSED--
 
 ## Usuário cadastra categorias
-Branch: user_create_categories
+#### *Branch: user_create_categories*
 
 Error message: undefined local variable or method 'new_category_path'  
   -Added new and create to resources, created actions on CategoriesController, created views/categories/new.html.erb  
@@ -195,7 +195,7 @@ Error message: Error message: expect(page).to have_content "Warning! All fields 
 --TEST PASSED--
 
 ## Usuário edita empresas
-Branch: user_edit_companies
+#### *Branch: user_edit_companies*
 
 Error message: undefined method 'edit_company_path'  
   -Added resources edit and update on for company, actions on controller, and template w/ form  
@@ -204,7 +204,7 @@ Error message: First argument in form cannot contain nil or be empty
 --TEST PASSED--
 
 ## Destacar vagas recentes
-Branch: recent_jobs
+#### *Branch: recent_jobs*
 
 Error message: expect(page).to have_content('Novidade')  
   -Added validation on index  
@@ -213,21 +213,21 @@ Error message: execped(job).to be_recent
 --TEST PASSED--
 
 ## Destacar empresas com muitas vagas
-Branch: premium_companies
+#### *Branch: premium_companies*
 
 soon...
 
 ## Vagas expiram com 90 dias
-Branch: ???
+#### *Branch: ???*
 
 soon...
 
 ## Usuário deve se autenticar
-Branch: ???
+#### *Branch: ???*
 
 soon...
 
 ## Usuário adiciona logo da empresa
-Branch: ???
+#### *Branch: ???*
 
 soon...

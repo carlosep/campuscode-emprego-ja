@@ -1,10 +1,12 @@
-<% if @errors %>
-  <h1>Are you kidding me??</h1>
-  <% @errors.each do |error| %>
-  <p><%= error %> </p>
+<div id="errors">
+<% if @job.errors.any? %>
+<ul>
+  <% @job.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
   <% end %>
+</ul>
 <% end %>
-
+</div>
 <%= form_for @job do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>

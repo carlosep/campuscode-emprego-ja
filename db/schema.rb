@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20160123121445) do
   create_table "jobs", force: :cascade do |t|
     t.string   "title"
     t.string   "category"
-    t.string   "company"
     t.text     "description"
     t.string   "location"
     t.datetime "created_at",  null: false

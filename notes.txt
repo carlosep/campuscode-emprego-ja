@@ -1,0 +1,5 @@
+branch premium_companies
+* Error message: expect(page).to have_content('Empresa Premium')
+  * Added method premium? to company model, and validation on view
+
+***--Test Passed--***

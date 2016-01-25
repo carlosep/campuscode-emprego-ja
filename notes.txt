@@ -1,0 +1,6 @@
+branch recent_jobs
+  Error message: expect(page).to have_content('Novidade')
+    -Added validation on index
+  Error message: execped(job).to be_recent
+    -Defined custom method 'recent?' on job model and updated index validation to use this method.
+--TEST PASSED--

@@ -44,4 +44,12 @@ branch companies:
     -Added select_collection for Company on views/jobs/new, model associations between company and job, migration to add company_id on job, and permission for company_id on JobsController
   Error message: expect(page).to have_content company.name
     -Added job.company.name where it used to be job.company
+
+branch featured_jobs
+  Error message: Unable to find checkbox "Featured"
+    -Added checkbox featured to new job form
+  Error message: Undefined method 'featured'
+    -Generated migration to add a boolean featured field to jobs
+  Error message: expect(page).to have_content ...
+    -Added permission for 'featured' on JobsController and if clause to display message on view in case featured.
 --TEST PASSED--

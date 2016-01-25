@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160123114500) do
+ActiveRecord::Schema.define(version: 20160123121445) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20160123114500) do
     t.string   "location"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.boolean  "featured"
     t.integer  "company_id"
+    t.boolean  "featured"
   end
 
   add_index "jobs", ["company_id"], name: "index_jobs_on_company_id"

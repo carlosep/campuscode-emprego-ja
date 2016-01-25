@@ -1,8 +1,4 @@
 class CompaniesController < ApplicationController
-  def show
-    @company = Company.find(params[:id])
-  end
-
   def new
     @company = Company.new
   end
@@ -12,8 +8,13 @@ class CompaniesController < ApplicationController
     redirect_to @company
   end
 
+  def show
+    @company = Company.find(params[:id])
+  end
+
   private
+
   def company_params
-    params.require(:company).permit(:name, :location, :mail, :phone);
+    params.require(:company).permit(:name, :location, :mail, :phone)
   end
 end

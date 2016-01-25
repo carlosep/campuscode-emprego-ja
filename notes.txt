@@ -1,0 +1,12 @@
+home branch:
+  Error message: undefined method or variable 'root_path'
+    -Add root route on routes.rb
+  Error message: unitialized constant WelcomeController
+    -Add controller WelcomeController
+  Error message: action 'index' not found.
+    -Add action index on WelcomeController
+  Error message: template missing.
+    -Add index template on views/welcome/
+  Error message: expected(page).to have_content
+    -Add required content to index template
+--Test Passed--

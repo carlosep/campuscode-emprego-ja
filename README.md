@@ -231,7 +231,10 @@ We will be listing the steps taken to solve the exercises on every branch of the
 ## Destacar empresas com muitas vagas
 #### *Branch: premium_companies*
 
-* soon...
+* Error message: expect(page).to have_content('Empresa Premium')
+  * Added method premium? to company model, and validation on view
+
+***--Test Passed--***
 
 ## Vagas expiram com 90 dias
 #### *Branch: ???*

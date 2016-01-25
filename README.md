@@ -53,6 +53,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Added file views/jobs/show.html.erb  
 * Error message: expect(page).to have_content  
   * Added correct job :id on show action and job content on views/jobs/show.html.erb  
+
 ***--Test Passed--***
 
 ## Visitante visualiza vagas
@@ -62,6 +63,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Generated model with all fields and migration.  
 * Error message: expect(page).to have_content  
   * Added @jobs = Job.all on index action on HomeController and iterated it on views/home/index.html.erb  
+
 ***--Test Passed--***
 
 ## Usuário cadastra vaga
@@ -73,6 +75,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Added form to views/jobs/new.html.erb  
 * Error message: action 'create' could not be found for JobsController  
   * Added action create on JobsController w/ redirect_to @job  
+
 ***--Test Passed--***
 
 ## Usuário usa empresas cadastradas
@@ -83,7 +86,8 @@ We will be listing the steps taken to solve the exercises on every branch of the
 * Error message: Unable to find select box "Company"  
   * Added select_collection for Company on views/jobs/new, model associations between company and job, migration to add   company_id on job, and permission for company_id on JobsController  
 * Error message: expect(page).to have_content company.name  
-  * Added job.company.name where it used to be job.company  
+  * Added job.company.name where it used to be job.company
+
 ***--Test Passed--***
 
 ## Usuário marca vagas em destaque
@@ -95,6 +99,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Generated migration to add a boolean featured field to jobs  
 * Error message: expect(page).to have_content ...  
   * Added permission for 'featured' on JobsController and if clause to display message on view in case featured.  
+
 ***--Test Passed--***
 
 ## Usuário cadastra empresas
@@ -110,6 +115,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Added action 'create' and template views/companies/show.html.erb  
 * Error message: expect(page).to have_content company.name  
   * Added action 'show' and filled views/companies/show.html.erb w/ correct data  
+
 ***--Test Passed--***
 
 ## Usuário deve criar vagas corretamente
@@ -123,6 +129,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Added @companies = Company.all on action 'create' at JobsController  
 * Error message: expect(page).to have_content ...  
   * Added iteration on @errors at views/jobs/new  
+
 ***--Test Passed--***
 
 ## Visitante escolhe vagas por empresas
@@ -132,6 +139,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Added @companies = Company.all on HomeController and added iteration that creates links of all companies on index  
 * Error message: expect(page).to have_content job.title  
   * Added iteration for jobs on views/companies/show.html.erb  
+
 ***--Test Passed--***
 
 ## Usuário usa categorias cadastradas
@@ -145,6 +153,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Changed permissions on job controller from :category to :category_id  
 * Error message: expect(page).to have_content job.location  
   * Fixed broken tests, homepage view, changed "company" on views/jobs/new.html.erb to "company_id".  
+
 ***--Test Passed--***
 
 ## Visitante escolhe vagas por categorias
@@ -156,6 +165,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Added resources routes for, controller for category w/ action and template show  
 * Error message: expect(page).to have_content category.name  
   * Added @company on CategoriesController and iterated on @categories.jobs on view  
+
 ***--Test Passed--***
 
 ## Usuário edita vaga
@@ -169,6 +179,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Added template w/ form (changed 'Criar Vaga' for 'Atualizar Vaga')  
 * Error message: undefined method 'map' for nil:NilClass  
   * Added permit on before_action for set_companies and set_categories  
+
 ***--Test Passed--***
 
 ## Usuário deve criar empresas corretamente
@@ -180,6 +191,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Changed Job.create on action 'create' for Job.new, if saved redirect, if not throw error messages and render 'new'  
 * Error message: expect(page).to have_content "Warning! All fields are mandatory."  
   * Added error validation on views/companies/new.html.erb  
+
 ***--Test Passed--***
 
 ## Usuário cadastra categorias
@@ -193,6 +205,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Fixed action create on CategoriesController  
 * Error message: Error message: expect(page).to have_content "Warning! All fields are mandatory."  
   * Added if errors display message on views/categories/new.html.erb  
+
 ***--Test Passed--***
 
 ## Usuário edita empresas
@@ -202,6 +215,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Added resources edit and update on for company, actions on controller, and template w/ form  
 * Error message: First argument in form cannot contain nil or be empty  
   * Added set_company before_action  
+
 ***--Test Passed--***
 
 ## Destacar vagas recentes
@@ -211,6 +225,7 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Added validation on index  
 * Error message: execped(job).to be_recent  
   * Defined custom method 'recent?' on job model and updated index validation to use this method.  
+
 ***--Test Passed--***
 
 ## Destacar empresas com muitas vagas

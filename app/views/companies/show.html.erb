@@ -4,13 +4,4 @@
 <p><strong>E-mail: </strong><%= @company.mail %></p>
 <p><strong>Telefone: </strong><%= @company.phone %></p>
 
-<h1>Vagas:</h1>
-<hr>
-<% @company.jobs.each do |job| %>
-  <h3><%= job.title %></h3>
-  <p><%= job.company.name %></p>
-  <p><%= job.category %></p>
-  <p><%= job.description %></p>
-  <p><%= job.location %></p>
-  <%= link_to 'Ver mais', job %>
-<% end %>
+<%= render @company.jobs %>

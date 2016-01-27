@@ -42,7 +42,13 @@
       "/home/carlos/CampusCode/gitlab_projects/emprego-ja/app/models/job.rb": [
         1,
         1,
+        1,
         null,
+        1,
+        null
+      ],
+      "/home/carlos/CampusCode/gitlab_projects/emprego-ja/app/models/category.rb": [
+        1,
         1,
         null
       ],
@@ -74,6 +80,10 @@
         null,
         null,
         1,
+        6,
+        null,
+        null,
+        1,
         null,
         3,
         null,
@@ -89,6 +99,6 @@
         null
       ]
     },
-    "timestamp": 1453752717
+    "timestamp": 1453856137
   }
 }

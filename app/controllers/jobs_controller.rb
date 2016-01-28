@@ -20,6 +20,10 @@ class JobsController < ApplicationController
 
   private
 
+  def set_categories
+    @categories = Category.all
+  end
+
   def set_companies
     @companies = Company.all
   end

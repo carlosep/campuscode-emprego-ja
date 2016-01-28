@@ -91,3 +91,12 @@ branch categories
   Error message: expect(page).to have_content job.location
     -Fixed broken tests, homepage view, changed "company" on views/jobs/new.html.erb to "company_id".
 --TEST PASSED--
+
+branch jobs_by_categories
+  Error message: Unable to find link or button "Desenvolvedor"
+    -Added @categories on HomeController and Iteration on index
+  Error message: Undefined method 'category_path'
+    -Added resources routes for, controller for category w/ action and template show
+  Error message: expect(page).to have_content category.name
+    -Added @company on CategoriesController and iterated on @categories.jobs on view
+  --TEST PASSED--

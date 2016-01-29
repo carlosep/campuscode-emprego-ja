@@ -7,6 +7,7 @@ feature 'Visitor view premium companies' do
 
     5.times do
       create_job(company)
+      #porque não posso passar (company: company) ??
     end
 
     visit root_path

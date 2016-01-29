@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 home branch:
   Error message: undefined method or variable 'root_path'
     -Add root route on routes.rb
@@ -118,4 +119,14 @@ branch user_create_valid_company
     -Changed Job.create on action 'create' for Job.new, if saved redirect, if not throw error messages and render 'new'
   Error message: expect(page).to have_content "Warning! All fields are mandatory."
     -Added error validation on views/companies/new.html.erb
---TEST PASSED--
+
+branch user_create_category
+  Error message: undefined local variable or method 'new_category_path'
+    -Added new and create to resources, created actions on CategoriesController, created views/categories/new.html.erb
+  Error message: expect(page).to have_content "Warning! All fields are mandatory."
+    -Added validation on model Category
+  Error message: ActionController::RoutingError: No route matches [GET] "/categories"
+    -Fixed action create on CategoriesController
+  Error message: Error message: expect(page).to have_content "Warning! All fields are mandatory."
+    -Added if errors display message on views/categories/new.html.erb
+--TEST PASSED--e

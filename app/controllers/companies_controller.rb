@@ -8,7 +8,7 @@ class CompaniesController < ApplicationController
     if @company.save
       redirect_to @company
     else
-      @errors = @company.errors
+      flash[:warning] = 'Warning! All fields are mandatory.'
       render :new
     end
   end

@@ -135,4 +135,11 @@ branch user_edit_companies
     -Added resources edit and update on for company, actions on controller, and template w/ form
   Error message: First argument in form cannot contain nil or be empty
     -Added set_company before_action
+
+branch recent_jobs
+  Error message: expect(page).to have_content('Novidade')
+    -Added validation on index
+  Error message: execped(job).to be_recent
+    -Defined custom method 'recent?' on job model and updated index validation to use this method.
+
 --TEST PASSED--

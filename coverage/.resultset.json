@@ -5,6 +5,22 @@
         1,
         null
       ],
+      "/home/carlos/CampusCode/gitlab_projects/emprego-ja/app/models/job.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        12,
+        11,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
       "/home/carlos/CampusCode/gitlab_projects/emprego-ja/app/models/company.rb": [
         1,
         1,
@@ -14,13 +30,18 @@
       "/home/carlos/CampusCode/gitlab_projects/emprego-ja/app/controllers/companies_controller.rb": [
         1,
         1,
-        null,
         1,
-        4,
+        2,
         null,
         null,
         1,
         2,
+        2,
+        1,
+        null,
+        1,
+        1,
+        null,
         null,
         null,
         1,
@@ -31,17 +52,11 @@
         1,
         null,
         0,
+        0,
         null,
         null,
         null,
         1,
-        2,
-        2,
-        1,
-        null,
-        1,
-        1,
-        null,
         null,
         null,
         1,
@@ -58,14 +73,6 @@
       "/home/carlos/CampusCode/gitlab_projects/emprego-ja/app/controllers/application_controller.rb": [
         1,
         null,
-        null,
-        1,
-        null
-      ],
-      "/home/carlos/CampusCode/gitlab_projects/emprego-ja/app/models/job.rb": [
-        1,
-        1,
-        1,
         null,
         1,
         null
@@ -162,13 +169,13 @@
       "/home/carlos/CampusCode/gitlab_projects/emprego-ja/app/controllers/home_controller.rb": [
         1,
         1,
-        7,
-        7,
-        7,
+        8,
+        8,
+        8,
         null,
         null
       ]
     },
-    "timestamp": 1454072589
+    "timestamp": 1454072960
   }
 }

@@ -1,9 +1,6 @@
-<% if @errors %>
-  <p> Warning! All fields are mandatory. </p>
-<% end %>
-
+<span class="error_message"><%= flash[:warning] %></span>
 <%= form_for @category do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit "Criar Categoria" %>
+  <%= f.label :name  %>
+  <%= f.text_field :name  %>
+  <%= f.submit 'Criar Categoria' %>
 <% end %>

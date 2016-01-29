@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 home branch:
   Error message: undefined method or variable 'root_path'
     -Add root route on routes.rb
@@ -129,4 +128,11 @@ branch user_create_category
     -Fixed action create on CategoriesController
   Error message: Error message: expect(page).to have_content "Warning! All fields are mandatory."
     -Added if errors display message on views/categories/new.html.erb
---TEST PASSED--e
+--TEST PASSED--
+
+branch user_edit_companies
+  Error message: undefined method 'edit_company_path'
+    -Added resources edit and update on for company, actions on controller, and template w/ form
+  Error message: First argument in form cannot contain nil or be empty
+    -Added set_company before_action
+--TEST PASSED--

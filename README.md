@@ -237,9 +237,10 @@ We will be listing the steps taken to solve the exercises on every branch of the
 ***--Test Passed--***
 
 ## Vagas expiram com 90 dias
-#### *Branch: ???*
+#### *Branch: expired_jobs*
 
-* soon...
+* Error message: expect(page).not_to have_content('Desenvolvedor Rails')
+  * Defined custom method 'expired?' on job model and added validation on index
 
 ## Usuário deve se autenticar
 #### *Branch: ???*

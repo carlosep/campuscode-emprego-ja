@@ -24,6 +24,7 @@ feature 'User creates a new job' do
                category: category)
 
     visit edit_job_path(job)
+    sign_in
 
     fill_in 'Title',       with: 'Dev Mais que Master'
     fill_in 'Location',    with: 'Recife'
@@ -56,6 +57,7 @@ feature 'User creates a new job' do
                featured:    false)
 
     visit edit_job_path(job)
+    sign_in
 
     fill_in 'Title',       with: 'Dev Mais que Master'
     fill_in 'Location',    with: 'Recife'
@@ -73,6 +75,4 @@ feature 'User creates a new job' do
     expect(page).to have_content 'Vaga para Dev Mais que Master para o Quickstart'
     expect(page).to have_content 'Vaga em Destaque'
   end
-
-
 end

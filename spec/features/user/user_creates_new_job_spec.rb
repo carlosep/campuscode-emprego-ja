@@ -15,6 +15,7 @@ feature 'User creates a new job' do
                   description: 'Vaga para Dev Master para Bootcamp Rails')
 
     visit new_job_path
+    sign_in
 
     fill_in 'Title',       with: job.title
     fill_in 'Location',    with: job.location
@@ -43,7 +44,10 @@ feature 'User creates a new job' do
                   location: 'Rio de Janeiro',
                   category: category,
                   description: 'Vaga para Dev Master para o Bootcamp Rails')
+
     visit new_job_path
+    sign_in
+
     fill_in 'Title',       with: job.title
     fill_in 'Location',    with: job.location
     select category.name,  from: 'Category'
@@ -63,6 +67,7 @@ feature 'User creates a new job' do
 
   scenario 'invalid data' do
     visit new_job_path
+    sign_in
 
     click_on 'Criar Vaga'
 

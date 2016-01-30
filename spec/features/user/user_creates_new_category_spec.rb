@@ -6,6 +6,7 @@ feature 'User creates a new category' do
     category = Category.new(name: 'Desenvolvedor')
 
     visit new_category_path
+    sign_in
 
     fill_in 'Name',     with: category.name
     click_on 'Criar Categoria'

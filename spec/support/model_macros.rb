@@ -22,4 +22,13 @@ module ModelsMacros
                company: company,
                category: category)
   end
+
+  def sign_in
+    user = User.create(email: "user@empregoja.com.br", password: "12345678")
+    fill_in "Email", with: user.email
+    fill_in "Password", with: user.password
+    within('.actions') do
+      click_on "Log in"
+    end
+  end
 end

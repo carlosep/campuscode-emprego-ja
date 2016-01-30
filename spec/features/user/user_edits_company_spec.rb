@@ -8,6 +8,7 @@ feature 'User edits a company' do
                              mail:     'contato@campuscode.com.br')
 
     visit edit_company_path(company)
+    sign_in
 
     fill_in 'Name',     with: 'Code Campus'
     fill_in 'Location', with: 'Recife'

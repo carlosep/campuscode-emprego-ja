@@ -9,6 +9,7 @@ feature 'User creates a new company' do
                           phone:    '2369-3476')
 
     visit new_company_path
+    sign_in
 
     fill_in 'Name',     with: company.name
     fill_in 'Location', with: company.location

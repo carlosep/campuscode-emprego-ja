@@ -243,9 +243,9 @@ We will be listing the steps taken to solve the exercises on every branch of the
   * Defined custom method 'expired?' on job model and added validation on index
 
 ## Usuário deve se autenticar
-#### *Branch: ???*
+#### *Branch: authentication*
 
-* soon...
+* Installed and configured Devise
 
 ## Usuário adiciona logo da empresa
 #### *Branch: ???*

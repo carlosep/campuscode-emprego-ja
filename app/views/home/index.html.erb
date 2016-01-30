@@ -1,6 +1,7 @@
 <hr>
 <section id="jobs">
   <% @jobs.each do |job| %>
+  <% next if job.expired? #If the job is expired jump to the next iteration %> 
     <div class="jobs">
       <h3><%= job.title %></h1>
       <p><%= job.location %></p>

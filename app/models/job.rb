@@ -8,4 +8,8 @@ class Job < ActiveRecord::Base
   def recent?
     created_at > 5.days.ago
   end
+
+  def expired?
+    created_at < 90.days.ago
+  end
 end

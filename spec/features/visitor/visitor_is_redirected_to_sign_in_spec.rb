@@ -7,7 +7,8 @@ feature 'Visitor is redirected to sign in' do
   end
 
   scenario 'when trying to edit a job' do
-    visit edit_job_path
+    job = create_job
+    visit edit_job_path(job)
     expect(page).to have_current_path(user_session_path)
   end
 
@@ -17,7 +18,8 @@ feature 'Visitor is redirected to sign in' do
   end
 
   scenario 'when trying to edit a company' do
-    visit edit_company_path
+    company = create_company
+    visit edit_company_path(company)
     expect(page).to have_current_path(user_session_path)
   end
 

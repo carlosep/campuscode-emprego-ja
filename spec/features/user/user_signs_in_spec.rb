@@ -3,6 +3,7 @@ require 'rails_helper'
 feature 'User signs in' do
   scenario 'successfully' do
     visit root_path
+    click_on "Sign in"
     sign_in
     expect(page).to have_content("Signed in successfully.")
   end

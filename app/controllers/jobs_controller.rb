@@ -38,6 +38,7 @@ class JobsController < ApplicationController
   def set_collections
     @categories = Category.all
     @companies = Company.all
+    @contracts = Contract.all
   end
 
   def set_job

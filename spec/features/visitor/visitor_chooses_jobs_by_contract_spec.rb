@@ -4,7 +4,7 @@ feature 'Visitor chooses jobs by contract' do
   scenario 'successfully' do
     contract = create_contract #add macro
 
-    job = create_job(category: category)
+    job = create_job(contract: contract)
 
     job_2 = create_job(title: 'Vaga de Dev',
                        description: 'Dev Junior Rails com ao menos um projeto',

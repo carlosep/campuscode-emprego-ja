@@ -15,9 +15,15 @@ module ModelsMacros
     Category.create(name: name)
   end
 
-  def create_job(title: nil, description: nil, location: nil, category: nil, company: nil)
+  def create_contract(name = nil)
+    name ||= 'CLT'
+    Contract.create(name: name)
+  end
+
+  def create_job(title: nil, description: nil, location: nil, category: nil, company: nil, contract: nil)
     company ||= create_company
     category ||= create_category
+    contract ||= create_contract
     title ||= 'Desenvolvedor Rails'
     description ||= 'Desenvolvedor Full Stack Rails'
     location ||= 'São Paulo - SP'
@@ -25,7 +31,8 @@ module ModelsMacros
                description: description,
                location: location,
                company: company,
-               category: category)
+               category: category,
+               contract: contract)
   end
 
   def sign_in

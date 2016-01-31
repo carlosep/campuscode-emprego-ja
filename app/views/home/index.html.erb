@@ -1,7 +1,7 @@
 <hr>
 <section id="jobs">
   <% @jobs.each do |job| %>
-  <% next if job.expired? #If the job is expired jump to the next iteration %> 
+  <% next if job.expired? #If the job is expired jump to the next iteration %>
     <div class="jobs">
       <h3><%= job.title %></h1>
       <p><%= job.location %></p>
@@ -26,5 +26,10 @@
 <aside>
   <% @categories.each do |category| %>
     <%= link_to category.name, category %>
+  <% end %>
+</aside>
+<aside>
+  <% @contracts.each do |contract| %>
+    <%= link_to contract.name, contract %>
   <% end %>
 </aside>

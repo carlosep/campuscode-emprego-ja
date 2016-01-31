@@ -5,7 +5,7 @@ feature 'User creates a new contract type' do
     visit new_contract_path
     sign_in
 
-    fill_in "Type:", with: "CLT"
+    fill_in "Name", with: "CLT"
 
     click_on "Criar Contrato"
 
@@ -16,6 +16,6 @@ feature 'User creates a new contract type' do
     visit new_contract_path
     sign_in
     click_on "Criar Contrato"
-    expect(page).to have_content("Warning! All fields are mandadory.")
+    expect(page).to have_content("Warning! All fields are mandatory.")
   end
 end

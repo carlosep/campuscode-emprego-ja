@@ -10,6 +10,7 @@ feature 'User creates a new job' do
     fill_in 'Location',       with: job.location
     select job.category.name, from: 'Category'
     select job.company.name,  from: 'Company'
+    select job.contract.name, from: 'Contract'
     fill_in 'Description',    with: job.description
 
     click_on 'Criar Vaga'
@@ -21,7 +22,7 @@ feature 'User creates a new job' do
     expect(page).to have_content job.description
   end
 
-  scenario 'featured job' do
+  scenario 'featured' do
     job = create_job
     visit new_job_path
     sign_in

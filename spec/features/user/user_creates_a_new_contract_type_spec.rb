@@ -1,0 +1,21 @@
+require 'rails_helper'
+
+feature 'User creates a new contract type' do
+  scenario 'successfully' do
+    visit new_contract_path
+    sign_in
+
+    fill_in "Type:", with: "CLT"
+
+    click_on "Criar Contrato"
+
+    expect(page).to have_content("CLT")
+  end
+
+  scenario 'unsuccessfully' do
+    visit new_contract_path
+    sign_in
+    click_on "Criar Contrato"
+    expect(page).to have_content("Warning! All fields are mandadory.")
+  end
+end

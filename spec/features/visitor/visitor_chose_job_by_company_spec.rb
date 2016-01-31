@@ -2,20 +2,10 @@ require 'rails_helper'
 
 feature 'Visitor choose jobs by company' do
   scenario 'successfully' do
-    company = Company.create(name:     'Campus Code',
-                             location: 'São Paulo',
-                             mail:     'contato@campuscode.com.br',
-                             phone:    '2369-3476')
+    company = create_company
+    job = create_job(company:  company)
 
-    category = Category.create(name: 'Desenvolvedor')
-
-    job = Job.create(title:       'Vaga de Dev',
-                     category:    category,
-                     description: 'Dev Junior Rails com ao menos um projeto',
-                     location:    'São Paulo',
-                     company:  company)
     visit root_path
-
     click_on company.name
 
     expect(page).to have_content company.name
@@ -26,23 +16,14 @@ feature 'Visitor choose jobs by company' do
   end
 
   scenario 'and does not see other company jobs' do
-    company = Company.create(name:     'Campus Code',
-                             location: 'São Paulo',
-                             mail:     'contato@campuscode.com.br',
-                             phone:    '2369-3476')
+    company = create_company
 
-    company_2 = Company.create(name:     'Another Company',
+    company_2 = create_company(name:     'Another Company',
                                location: 'Another City',
                                mail:     'contato@company.com.br',
                                phone:    '1111-2222')
 
-    category = Category.create(name: 'Desenvolvedor')
-
-    job = Job.create(title:       'Vaga de Dev',
-                     category:    category,
-                     description: 'Dev Junior Rails com ao menos um projeto',
-                     location:    'São Paulo',
-                     company:  company)
+    job = create_job(company:  company)
 
     visit root_path
 

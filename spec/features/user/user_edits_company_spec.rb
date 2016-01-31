@@ -2,10 +2,7 @@ require 'rails_helper'
 
 feature 'User edits a company' do
   scenario 'successfully' do
-    company = Company.create(name:     'Campus Code',
-                             location: 'São Paulo',
-                             phone:    '2369-3476',
-                             mail:     'contato@campuscode.com.br')
+    company = create_company
 
     visit edit_company_path(company)
     sign_in

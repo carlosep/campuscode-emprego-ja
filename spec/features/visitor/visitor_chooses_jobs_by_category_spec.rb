@@ -2,23 +2,13 @@ require 'rails_helper'
 
 feature 'Visitor chooses jobs by category' do
   scenario 'successfully' do
-    company = Company.create(name:     'Campus Code',
-                             location: 'São Paulo',
-                             mail:     'contato@campuscode.com.br',
-                             phone:    '2369-3476')
+    category = create_category
 
-    category = Category.create(name: 'Desenvolvedor')
+    job = create_job(category: category)
 
-    job = Job.create(title: 'Vaga de Dev',
-               description: 'Dev Junior Rails com ao menos um projeto',
-               location: 'São Paulo',
-               company: company,
-               category: category)
-
-    job_2 = Job.create(title: 'Vaga de Dev',
+    job_2 = create_job(title: 'Vaga de Dev',
                        description: 'Dev Junior Rails com ao menos um projeto',
-                       location: 'São Paulo',
-                       company: company,
+                       location: 'Acre',
                        category: category)
     visit root_path
 
@@ -38,20 +28,9 @@ feature 'Visitor chooses jobs by category' do
   end
 
   scenario 'and does not see other category jobs' do
-    company = Company.create(name:     'Campus Code',
-                             location: 'São Paulo',
-                             mail:     'contato@campuscode.com.br',
-                             phone:    '2369-3476')
+    category_2 = create_category('Designer')
 
-    category = Category.create(name: 'Desenvolvedor')
-
-    category_2 = Category.create(name: 'Designer')
-
-    job = Job.create(title: 'Vaga de Dev',
-                     description: 'Dev Junior Rails com ao menos um projeto',
-                     location: 'São Paulo',
-                     company: company,
-                     category: category)
+    job = create_job
 
     visit root_path
 

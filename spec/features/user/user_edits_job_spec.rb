@@ -3,25 +3,14 @@ require 'rails_helper'
 feature 'User creates a new job' do
 
   scenario 'successfully' do
-    company = Company.create(name:    'Campus Code',
-                            location: 'São Paulo',
-                            mail:     'contato@campuscode.com.br',
-                            phone:    '2369-3476')
-
-    new_company = Company.create(name:     'Code Campus',
-                                 location: 'Refice',
+    new_company = create_company(name:     'Code Campus',
+                                 location: 'Recife',
                                  mail:     'contato@codecampus.com.br',
                                  phone:    '1111-5555')
 
-    category = Category.create(name: 'Desenvolvedor')
+    new_category = create_category(name: 'Dev Ninja')
 
-    new_category = Category.create(name: 'Dev Ninja')
-
-    job = Job.create(title: 'Vaga de Dev',
-               description: 'Dev Junior Rails com ao menos um projeto',
-               location: 'São Paulo',
-               company: company,
-               category: category)
+    job = create_job
 
     visit edit_job_path(job)
     sign_in

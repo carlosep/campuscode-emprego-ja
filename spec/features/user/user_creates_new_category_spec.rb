@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'User creates a new category' do
 
   scenario 'successfully' do
-    category = Category.new(name: 'Desenvolvedor')
+    category = create_category
 
     visit new_category_path
     sign_in

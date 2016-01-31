@@ -2,8 +2,7 @@ require 'rails_helper'
 
 feature 'Visitor does not view expired jobs' do
   scenario 'successfully' do
-    company = create_company
-    new_job = create_job(company, 'Desenvolvedor front-end')
+    new_job = create_job(title: 'Desenvolvedor front-end')
 
     travel_to 200.days.ago do
       job = create_job

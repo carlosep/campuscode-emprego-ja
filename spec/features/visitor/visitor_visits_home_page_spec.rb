@@ -6,22 +6,11 @@ feature 'Visitor visits Emprego Ja home page' do
     expect(page).to have_content('Emprego Já')
   end
   scenario 'and see jobs' do
-    company = Company.create(name: 'Campus Code',
-                            location: 'São Paulo',
-                            mail: 'contato@campus.com.br',
-                            phone: '2369-3476')
-
-    category = Category.create(name: 'Desenvolvedor')
-
-    Job.create(title: 'Vaga de Dev',
-               category: category,
+    create_job(title: 'Vaga de Dev',
                description: 'Dev Junior Rails com ao menos um projeto',
-               company: company,
                location: 'São Paulo')
 
-    Job.create(title: 'Vaga de QA',
-               category: category,
-               company: company,
+    create_job(title: 'Vaga de QA',
                description: 'QA Junior com ao menos um projeto',
                location: 'São Paulo')
 

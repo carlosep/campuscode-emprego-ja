@@ -246,6 +246,8 @@ We will be listing the steps taken to solve the exercises on every branch of the
 #### *Branch: authentication*
 
 * Installed and configured Devise
+  * Added before_action :authenticate_user! on controllers
+  * Added Sign in/out/up links on application layout
 
 ## Usuário adiciona logo da empresa
 #### *Branch: ???*

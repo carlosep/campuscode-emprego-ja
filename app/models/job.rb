@@ -4,7 +4,8 @@ class Job < ActiveRecord::Base
   belongs_to :category
   belongs_to :contract
 
-  validates :title, :location, :category, :company_id, :description, presence: true
+  validates :title, :location, :category, :company_id, :description,
+            presence: true
 
   def recent?
     created_at > 5.days.ago

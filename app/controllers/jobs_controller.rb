@@ -10,9 +10,6 @@ class JobsController < ApplicationController
     @job = Job.new
   end
 
-  def edit
-  end
-
   def update
     if @job.update(job_params)
       redirect_to @job
@@ -33,6 +30,7 @@ class JobsController < ApplicationController
   def edit
     @job = Job.new
   end
+
   private
 
   def set_collections
@@ -51,7 +49,7 @@ class JobsController < ApplicationController
 
   def job_params
     params.require(:job)
-      .permit(:title, :location, :category_id, :description, :featured,
-             :company_id)
+          .permit(:title, :location, :category_id, :description, :featured,
+                  :company_id)
   end
 end

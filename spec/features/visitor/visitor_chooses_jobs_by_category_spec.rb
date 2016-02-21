@@ -43,5 +43,4 @@ feature 'Visitor chooses jobs by category' do
     expect(page).not_to have_content job.description
     expect(page).not_to have_content job.location
   end
-
 end

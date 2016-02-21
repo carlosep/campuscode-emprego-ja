@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'Visitor chooses jobs by contract' do
   scenario 'successfully' do
-    contract = create_contract #add macro
+    contract = create_contract
 
     job = create_job(contract: contract)
 
@@ -44,5 +44,4 @@ feature 'Visitor chooses jobs by contract' do
     expect(page).not_to have_content job.description
     expect(page).not_to have_content job.location
   end
-
 end

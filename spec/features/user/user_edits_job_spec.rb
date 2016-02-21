@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'User creates a new job' do
-
   scenario 'successfully' do
     new_company = create_company(name:     'Code Campus',
                                  location: 'Recife',
@@ -19,7 +18,7 @@ feature 'User creates a new job' do
     fill_in 'Location',    with: 'Recife'
     select  new_company.name
     select  new_category.name
-    fill_in 'Description', with: 'Vaga para Dev Mais que Master para o Quickstart'
+    fill_in 'Description', with: 'Vaga de Dev Mais que Master para o Quickstart'
 
     click_on 'Atualizar Vaga'
 
@@ -27,23 +26,23 @@ feature 'User creates a new job' do
     expect(page).to have_content 'Recife'
     expect(page).to have_content 'Dev Ninja'
     expect(page).to have_content 'Code Campus'
-    expect(page).to have_content 'Vaga para Dev Mais que Master para o Quickstart'
+    expect(page).to have_content 'Vaga de Dev Mais que Master para o Quickstart'
   end
 
   scenario 'featured job' do
     company = Company.create(name:     'Campus Code',
-                            location: 'São Paulo',
-                            mail:     'contato@campuscode.com.br',
-                            phone:    '2369-3476')
+                             location: 'São Paulo',
+                             mail:     'contato@campuscode.com.br',
+                             phone:    '2369-3476')
 
     category = Category.create(name: 'Desenvolvedor')
 
     job = Job.create(title: 'Vaga de Dev',
-               description: 'Dev Junior Rails com ao menos um projeto',
-               location:    'São Paulo',
-               company:  company,
-               category: category,
-               featured:    false)
+                     description: 'Dev Junior Rails com ao menos um projeto',
+                     location:    'São Paulo',
+                     company:  company,
+                     category: category,
+                     featured:    false)
 
     visit edit_job_path(job)
     sign_in
@@ -52,7 +51,7 @@ feature 'User creates a new job' do
     fill_in 'Location',    with: 'Recife'
     select  'Campus Code'
     select  'Desenvolvedor'
-    fill_in 'Description', with: 'Vaga para Dev Mais que Master para o Quickstart'
+    fill_in 'Description', with: 'Vaga de Dev Mais que Master para o Quickstart'
     check   'Featured'
 
     click_on 'Atualizar Vaga'
@@ -61,7 +60,7 @@ feature 'User creates a new job' do
     expect(page).to have_content 'Recife'
     expect(page).to have_content 'Desenvolvedor'
     expect(page).to have_content 'Campus Code'
-    expect(page).to have_content 'Vaga para Dev Mais que Master para o Quickstart'
+    expect(page).to have_content 'Vaga de Dev Mais que Master para o Quickstart'
     expect(page).to have_content 'Vaga em Destaque'
   end
 end

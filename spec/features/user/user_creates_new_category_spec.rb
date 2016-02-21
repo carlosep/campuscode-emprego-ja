@@ -1,14 +1,13 @@
 require 'rails_helper'
 
 feature 'User creates a new category' do
-
   scenario 'successfully' do
     category = create_category
 
     visit new_category_path
     sign_in
 
-    fill_in 'Name',     with: category.name
+    fill_in 'Name', with: category.name
     click_on 'Criar Categoria'
 
     expect(page).to have_content category.name
@@ -19,6 +18,6 @@ feature 'User creates a new category' do
     sign_in
     click_on 'Criar Categoria'
 
-    expect(page).to have_content "Warning! All fields are mandatory."
+    expect(page).to have_content 'Warning! All fields are mandatory.'
   end
 end

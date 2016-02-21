@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'User creates a new company' do
-
   scenario 'successfully' do
     company = create_company
 
@@ -26,6 +25,6 @@ feature 'User creates a new company' do
     sign_in
     click_on 'Criar Empresa'
 
-    expect(page).to have_content "Warning! All fields are mandatory."
+    expect(page).to have_content 'Warning! All fields are mandatory.'
   end
 end

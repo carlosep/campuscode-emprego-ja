@@ -20,19 +20,6 @@ module ModelsMacros
     Contract.create(name: name)
   end
 
-  def create_job(title: nil, description: nil, location: nil, category: nil,
-                 company: nil, contract: nil)
-    company ||= create_company
-    category ||= create_category
-    contract ||= create_contract
-    title ||= 'Desenvolvedor Rails'
-    description ||= 'Desenvolvedor Full Stack Rails'
-    location ||= 'São Paulo - SP'
-    company.jobs.create(title: title, description: description,
-                        location: location, company: company,
-                        category: category, contract: contract)
-  end
-
   def sign_in
     user = User.create(email: 'user@empregoja.com.br', password: '12345678')
     fill_in 'Email', with: user.email
@@ -40,5 +27,24 @@ module ModelsMacros
     within('.actions') do
       click_on 'Log in'
     end
+  end
+
+  def create_job(args = {}) # actually sets jobs...
+    args[:company]     ||= create_company
+    args[:category]    ||= create_category
+    args[:contract]    ||= create_contract
+    args[:title]       ||= 'Desenvolvedor Rails'
+    args[:description] ||= 'Desenvolvedor Full Stack Rails'
+    args[:location]    ||= 'São Paulo - SP'
+    save_jobs(args)
+  end
+
+  private
+
+  def save_jobs(args)
+    args[:company].jobs
+                  .create(title: args[:title], description: args[:description],
+                          location: args[:location], company: args[:company],
+                          category: args[:category], contract: args[:contract])
   end
 end

@@ -1,0 +1,53 @@
+<% sign_in = t '.sign_in'; sign_up = t '.sign_up'%>
+<% sign_out = t '.sign_out'; home = t '.home';%>
+
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button	type="button"	class="navbar-toggle	collapsed"	data-toggle="collapse"	data-target="#collapibleMenu">
+				<span	class="icon-bar"></span>
+				<span	class="icon-bar"></span>
+				<span	class="icon-bar"></span>
+			</button>
+      <img src="http://ciyis.net/wp-content/themes/ciyis/timthumb.php?src=http://ciyis.net/wp-content/uploads/2016/01/pcw-browsers-primary-100609192-carousel.idge_.jpg&h=70&w=160zc=3&q=100" />
+    </div>
+    <div	class="collapse	navbar-collapse"	id="collapibleMenu">
+      <ul	class="nav	navbar-nav	navbar-left">
+        <li><%= link_to home, root_path %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to sign_out, destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to sign_in, new_user_session_path %></li>
+          <li><%= link_to sign_up, new_user_registration_path %></li>
+        <% end %>
+			</ul>
+    </div>
+  </div>
+</div>
+
+<div id="wrapper">
+
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul class="sidebar-nav">
+    <li class="sidebar-brand">
+      <h3>Busque sua vaga:</h3>
+    </li>
+    <li><h4>Companies</h4></li>
+    <% $companies.each do |company| %>
+      <li><%= link_to company.name, company %></li>
+      <% if company.premium? %>
+        <li><em>Empresa Premium</em></li>
+      <% end %>
+    <% end %>
+    <li> <h4>Categories</h4> </li>
+    <% $categories.each do |category| %>
+      <li><%= link_to category.name, category %><l/i>
+    <% end %>
+    <li> <h4>Contracts</h4> </li>
+    <% $contracts.each do |contract| %>
+      <li><%= link_to contract.name, contract %></li>
+    <% end %>
+  </ul>
+</div>
+<!-- /#sidebar-wrapper -->

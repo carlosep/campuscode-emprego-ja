@@ -14,22 +14,3 @@
       <hr>
     </div>
   <% end %>
-</section><hr>
-<aside>
-  <% @companies.each do |company| %>
-    <%= link_to company.name, company %>
-    <% if company.premium? %>
-      <p><em>Empresa Premium</em></p>
-    <% end %>
-  <% end %>
-</aside>
-<aside>
-  <% @categories.each do |category| %>
-    <%= link_to category.name, category %>
-  <% end %>
-</aside>
-<aside>
-  <% @contracts.each do |contract| %>
-    <%= link_to contract.name, contract %>
-  <% end %>
-</aside>

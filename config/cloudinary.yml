@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: carlosep
+  api_key: '717184179932174'
+  api_secret: dfXxFKlwYp3_nrCx35lq8401q_I
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: carlosep
+  api_key: '717184179932174'
+  api_secret: dfXxFKlwYp3_nrCx35lq8401q_I
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: carlosep
+  api_key: '717184179932174'
+  api_secret: dfXxFKlwYp3_nrCx35lq8401q_I
+  enhance_image_tag: true
+  static_image_support: false

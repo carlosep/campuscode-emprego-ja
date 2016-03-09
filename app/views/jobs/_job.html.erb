@@ -1,5 +1,24 @@
-<h3>Vagas</h3>
-<p><%= job.title %></p>
-<p><%= job.location %></p>
-<p><%= job.category.name %></p>
-<p><%= job.description %></p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= job.title %></h3>
+  </div>
+  <div class="panel-body">
+    <div class="row" >
+      <div class="col-lg-4" ;>
+        <div class="col-lg-6 text-right">Local da vaga:</div>
+        <div class="col-lg-6"><%= job.location %></div>
+        <div class="col-lg-6 text-right">Empresa:</div>
+        <div class="col-lg-6"><%= job.company.name %></div>
+        <div class="col-lg-6 text-right">Categoria:</div>
+        <div class="col-lg-6"><%= job.category.name %></div>
+        <div class="col-lg-6 text-right">Contract:</div>
+        <div class="col-lg-6"><%= job.contract.name %></div>
+      </div>
+      <div class="col-lg-5">
+        <div class="col-lg-12 text-center">Descrição:</div>
+        <div class="col-lg-12 text-justify"><%= job.description %></div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer"><%= link_to 'Ver mais', job %></div>
+</div>

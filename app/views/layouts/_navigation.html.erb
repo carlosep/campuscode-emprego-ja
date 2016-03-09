@@ -40,18 +40,18 @@
     <li class="sidebar-brand">
       <h3>Busque sua vaga:</h3>
     </li>
-    <li><h4>Companies</h4></li>
+    <li><h4>Empresas</h4></li>
     <% $companies.each do |company| %>
       <li><%= link_to company.name, company %></li>
       <% if company.premium? %>
         <li><em>Empresa Premium</em></li>
       <% end %>
     <% end %>
-    <li> <h4>Categories</h4> </li>
+    <li> <h4>Categorias</h4> </li>
     <% $categories.each do |category| %>
       <li><%= link_to category.name, category %><l/i>
     <% end %>
-    <li> <h4>Contracts</h4> </li>
+    <li> <h4>Tipos de Contrato</h4> </li>
     <% $contracts.each do |contract| %>
       <li><%= link_to contract.name, contract %></li>
     <% end %>

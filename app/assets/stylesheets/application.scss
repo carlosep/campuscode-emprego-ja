@@ -17,6 +17,12 @@
 .body-content	{
   margin-top:	60px;
 }
+.panel-body span{
+  color: #cc9900;
+}
+.body-content	h2{
+  margin-top: -35px;
+}
 
 .navbar-default {
   height: 70px;
@@ -27,8 +33,7 @@
 }
 
 .navbar-default .navbar-brand {
-    margin-right: 40px;
-    padding: 25px;
+  padding: 0px;
 }
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"

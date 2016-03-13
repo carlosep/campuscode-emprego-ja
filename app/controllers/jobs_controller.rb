@@ -1,5 +1,4 @@
 class JobsController < ApplicationController
-  before_action :set_collections, only: [:new, :create, :edit]
   before_action :set_job, only: [:edit, :show, :update]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update]
 
@@ -33,12 +32,6 @@ class JobsController < ApplicationController
 
   private
 
-  def set_collections
-    @categories = Category.all
-    @companies = Company.all
-    @contracts = Contract.all
-  end
-
   def set_job
     @job = Job.find(params[:id])
   end
@@ -49,7 +42,7 @@ class JobsController < ApplicationController
 
   def job_params
     params.require(:job)
-          .permit(:title, :location, :category_id, :description, :featured,
+          .permit(:title, :location, :category_id, :contract_id, :description, :featured,
                   :company_id)
   end
 end

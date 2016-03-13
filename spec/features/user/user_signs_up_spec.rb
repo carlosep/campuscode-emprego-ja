@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'User signs up' do
   scenario 'successfully' do
     visit root_path
-    click_on 'Sign up'
+    click_on 'Sign Up'
     fill_in 'Email', with: 'john@john.com'
     fill_in 'Password', with: '12345678'
     fill_in 'Password confirmation', with: '12345678'
@@ -15,7 +15,7 @@ feature 'User signs up' do
 
   scenario 'with blank fields' do
     visit root_path
-    click_on 'Sign up'
+    click_on 'Sign Up'
     within('.actions') do
       click_on 'Sign up'
     end
@@ -25,7 +25,7 @@ feature 'User signs up' do
 
   scenario 'with unmatching password' do
     visit root_path
-    click_on 'Sign up'
+    click_on 'Sign Up'
     fill_in 'Email', with: 'john@john.com'
     fill_in 'Password', with: '12345678'
     fill_in 'Password confirmation', with: '87654321'
@@ -38,7 +38,7 @@ feature 'User signs up' do
   scenario 'with existing user' do
     user = User.create(email: 'johndoe@john.com', password: '12312312')
     visit root_path
-    click_on 'Sign up'
+    click_on 'Sign Up'
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
     fill_in 'Password confirmation', with: user.password

@@ -12,7 +12,7 @@ feature 'User edits a company' do
     fill_in 'Mail',     with: 'contat@codecampus.com.br'
     fill_in 'Phone',    with: '1111-5555'
 
-    click_on 'Atualizar Empresa'
+    click_on 'Update Company'
 
     expect(page).to have_content 'Code Campus'
     expect(page).to have_content 'Recife'

@@ -20,7 +20,7 @@ feature 'User creates a new job' do
     select  new_category.name
     fill_in 'Description', with: 'Vaga de Dev Mais que Master para o Quickstart'
 
-    click_on 'Atualizar Vaga'
+    click_on 'Update Job'
 
     expect(page).to have_content 'Dev Mais que Master'
     expect(page).to have_content 'Recife'
@@ -42,13 +42,13 @@ feature 'User creates a new job' do
     fill_in 'Description', with: 'Vaga de Dev Mais que Master para o Quickstart'
     check   'Featured'
 
-    click_on 'Atualizar Vaga'
+    click_on 'Update Job'
 
     expect(page).to have_content 'Dev Mais que Master'
     expect(page).to have_content 'Recife'
     expect(page).to have_content 'Desenvolvedor'
     expect(page).to have_content 'Campus Code'
     expect(page).to have_content 'Vaga de Dev Mais que Master para o Quickstart'
-    expect(page).to have_content 'Vaga em Destaque'
+    expect(page).to have_content 'Featured Job'
   end
 end

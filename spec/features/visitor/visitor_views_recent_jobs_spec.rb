@@ -7,7 +7,7 @@ feature 'Visitor view recent jobs' do
 
     # primeiro elemento com o css "jobs" da pagina
     within('.panel:first-child') do
-      expect(page).to have_content('Novidade')
+      expect(page).to have_content('New')
     end
   end
 end

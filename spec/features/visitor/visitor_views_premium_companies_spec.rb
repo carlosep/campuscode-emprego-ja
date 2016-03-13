@@ -9,6 +9,6 @@ feature 'Visitor view premium companies' do
     end
 
     visit root_path
-    expect(page).to have_content('Empresa Premium')
+    expect(page).to have_content('Premium Company')
   end
 end

@@ -8,7 +8,7 @@ feature 'User creates a new category' do
     sign_in
 
     fill_in 'Name', with: category.name
-    click_on 'Criar Categoria'
+    click_on 'Create Category'
 
     expect(page).to have_content category.name
   end
@@ -16,7 +16,7 @@ feature 'User creates a new category' do
   scenario 'invalid' do
     visit new_category_path
     sign_in
-    click_on 'Criar Categoria'
+    click_on 'Create Category'
 
     expect(page).to have_content 'Warning! All fields are mandatory.'
   end

@@ -5,26 +5,26 @@
   <div class="panel-body">
     <div class="row" >
       <div class="col-lg-4" ;>
-        <div class="col-lg-6 text-right">Local da vaga:</div>
+        <div class="col-lg-6 text-right">Job Location:</div>
         <div class="col-lg-6"><%= job.location %></div>
-        <div class="col-lg-6 text-right">Empresa:</div>
+        <div class="col-lg-6 text-right">Company:</div>
         <div class="col-lg-6"><%= job.company.name %></div>
-        <div class="col-lg-6 text-right">Categoria:</div>
+        <div class="col-lg-6 text-right">Category:</div>
         <div class="col-lg-6"><%= job.category.name %></div>
         <div class="col-lg-6 text-right">Contract:</div>
         <div class="col-lg-6"><%= job.contract.name %></div>&nbsp;
         <% if job.recent? %>
-        <div class="col-lg-12 text-center"><span>Novidade <span class="glyphicon glyphicon-star"></span></span></div>
+        <div class="col-lg-12 text-center"><span>New <span class="glyphicon glyphicon-star"></span></span></div>
         <% end %>
         <% if job.featured? %>
-          <div class="col-lg-12 text-center"><span>-Vaga em Destaque-</span></div>
+          <div class="col-lg-12 text-center"><span>-Featured Job-</span></div>
         <% end %>
       </div>
       <div class="col-lg-5">
-        <div class="col-lg-12 text-center">Descrição:</div>
+        <div class="col-lg-12 text-center">Description:</div>
         <div class="col-lg-12 text-justify"><%= job.description %></div>
       </div>
     </div>
   </div>
-  <div class="panel-footer"><%= link_to 'Ver mais', job %></div>
+  <div class="panel-footer"><%= link_to 'More', job %></div>
 </div>

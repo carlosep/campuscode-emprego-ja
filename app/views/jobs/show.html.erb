@@ -1,12 +1,12 @@
 <div class="show-job">
   <h2><%= @job.title %></h2>
   <hr>
-  <p><strong>Categoria:</strong> <%= @job.category.name %></p>
-  <p><strong>Empresa:</strong> <%= @job.company.name%></p>
-  <p><strong>Descrição Completa:<br></strong> <%= @job.description %></p>
-  <p><strong>Localização:</strong> <%= @job.location %></p>
+  <p><strong>Category:</strong> <%= @job.category.name %></p>
+  <p><strong>Company:</strong> <%= @job.company.name%></p>
+  <p><strong>Full Description:<br></strong> <%= @job.description %></p>
+  <p><strong>Location:</strong> <%= @job.location %></p>
   <p><strong>Contract:</strong> <%= @job.contract.name %></p>
   <% if @job.featured? %>
-    <span><em>Vaga em Destaque<em></span>
+    <span><em>Featured Job<em></span>
   <% end %>
 </div>

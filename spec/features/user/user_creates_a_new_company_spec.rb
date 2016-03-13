@@ -12,7 +12,7 @@ feature 'User creates a new company' do
     fill_in 'Mail',     with: company.mail
     fill_in 'Phone',    with: company.phone
 
-    click_on 'Criar Empresa'
+    click_on 'Create Company'
 
     expect(page).to have_content company.name
     expect(page).to have_content company.location
@@ -23,7 +23,7 @@ feature 'User creates a new company' do
   scenario 'invalid' do
     visit new_company_path
     sign_in
-    click_on 'Criar Empresa'
+    click_on 'Create Company'
 
     expect(page).to have_content 'Warning! All fields are mandatory.'
   end

@@ -39,8 +39,6 @@ feature 'Visitor chooses jobs by contract' do
     expect(page).to have_content contract_2.name
 
     expect(page).not_to have_content job.title
-    expect(page).not_to have_content job.category.name
-    expect(page).not_to have_content job.company.name
     expect(page).not_to have_content job.description
     expect(page).not_to have_content job.location
   end

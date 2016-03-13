@@ -6,7 +6,7 @@ feature 'Visitor does not view expired jobs' do
     job = nil
 
     travel_to 200.days.ago do
-      job = create_job
+      job = create_job(title: 'Expired_job')
     end
 
     visit root_path

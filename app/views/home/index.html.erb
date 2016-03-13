@@ -1,9 +1,10 @@
 <section id="jobs">
   <h2>Vagas Recentes</h2>
   <% @jobs.reverse.each do |job| %>
-  <% next if job.expired? #If the job is expired jump to the next iteration %>
-    <div class="jobs">
-      <%= render @jobs.reverse %>
-    </div>
+    <% unless job.expired? %>
+      <div class="jobs">
+        <%= render job %>
+      </div>
+    <% end %>
   <% end %>
 </section>

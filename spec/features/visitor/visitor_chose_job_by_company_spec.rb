@@ -31,7 +31,6 @@ feature 'Visitor choose jobs by company' do
 
     expect(page).to have_content company_2.name
     expect(page).not_to have_content job.title
-    expect(page).not_to have_content job.category.name
     expect(page).not_to have_content job.description
     expect(page).not_to have_content job.location
   end

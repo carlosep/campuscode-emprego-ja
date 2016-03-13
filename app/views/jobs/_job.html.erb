@@ -12,7 +12,13 @@
         <div class="col-lg-6 text-right">Categoria:</div>
         <div class="col-lg-6"><%= job.category.name %></div>
         <div class="col-lg-6 text-right">Contract:</div>
-        <div class="col-lg-6"><%= job.contract.name %></div>
+        <div class="col-lg-6"><%= job.contract.name %></div>&nbsp;
+        <% if job.recent? %>
+        <div class="col-lg-12 text-center"><span>Novidade <span class="glyphicon glyphicon-star"></span></span></div>
+        <% end %>
+        <% if job.featured? %>
+          <div class="col-lg-12 text-center"><span>-Vaga em Destaque-</span></div>
+        <% end %>
       </div>
       <div class="col-lg-5">
         <div class="col-lg-12 text-center">Descrição:</div>

@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'Visitor visits Emprego Ja home page' do
   scenario 'successfully' do
     visit root_path
-    expect(page).to have_content('Emprego Já')
+    expect(page).to have_content('Vagas Recentes')
   end
   scenario 'and see jobs' do
     create_job(title: 'Vaga de Dev',

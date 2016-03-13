@@ -41,18 +41,18 @@
       <h3>Busque sua vaga:</h3>
     </li>
     <li><h4>Empresas</h4></li>
-    <% $companies.each do |company| %>
+    <% @companies.each do |company| %>
       <li><%= link_to company.name, company %></li>
       <% if company.premium? %>
         <li><em>Empresa Premium</em></li>
       <% end %>
     <% end %>
     <li> <h4>Categorias</h4> </li>
-    <% $categories.each do |category| %>
+    <% @categories.each do |category| %>
       <li><%= link_to category.name, category %><l/i>
     <% end %>
     <li> <h4>Tipos de Contrato</h4> </li>
-    <% $contracts.each do |contract| %>
+    <% @contracts.each do |contract| %>
       <li><%= link_to contract.name, contract %></li>
     <% end %>
   </ul>
